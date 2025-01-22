@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left-div">Nirmal Dhanik</div>
+        <div class="right-div">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contact me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="first-section">
+        <div class="left-section">
+          Hi, my name is <span id="highlight">Nirmal Dhanik</span>
+          <div>I'm a passionate</div>
+          <span id="element"></span>
+          <div class="buttons">
+            <button class="btn" onclick="showResume()">Download Resume</button>
+            <button class="btn" onclick="github()">Visit Github</button>
+          </div>
+        </div>
+        <div class="right-section">
+          <img src="developer.jpg" alt="" />
+        </div>
+      </section>
+      <hr
+        style="
+          border: 0;
+          background-color: #0f5088;
+          height: 1px;
+          margin: 40px 80px;
+        "
+      />
+      <section class="second-section">
+        <span id="highlight2">What i have done so far</span>
+        <h1>Project</h1>
+        <div class="project-card">
+          <h2>Library Management System</h2>
+          <p>
+            A library management app developed with Java, JSP, and Servlets.
+          </p>
+          <a
+            href="https://github.com/NirmalDhanik-17/library-system"
+            target="_blank"
+            class="btn"
+            >View Code</a
+          >
+        </div>
+        <div class="project-list">
+          <div class="project-card">
+            <h2>E-commerce Web Application</h2>
+            <p>An online shopping platform built with Spring MVC and MySQL.</p>
+            <a href="https://github.com/NirmalDhanik-17/ecommerce-app" target="_blank" class="btn">View Code</a>
+          </div>
+          
+          <div class="project-card">
+            <h2>Portfolio Website</h2>
+            <p>A personal portfolio created using HTML, CSS, and JavaScript.</p>
+            <a
+              href="https://github.com/NirmalDhanik-17/portfolio-website"
+              target="_blank"
+              class="btn"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Full Stack Web Developer",
+          "skilled in",
+          "Java",
+          "HTML",
+          "CSS",
+          " JavaScript",
+          "MySQL.",
+        ],
+        typeSpeed: 50,
+      });
+    </script>
+    <script>
+      function showResume() {
+        window.open("./resume.docx", "_blank");
+      }
+
+      function github() {
+        window.open("https://github.com/NirmalDhanik-17", "_blank");
+      }
+    </script>
+  </body>
+</html>
